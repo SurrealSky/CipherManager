@@ -5,8 +5,8 @@
 #include <afxcontrolbars.h>
 #include "PluginDefine.h"
 #include "PluginClass.h"
-#include "PIDocument.h"
-#include "PIMDIChildWndEx.h"
+//#include "PIDocument.h"
+//#include "PIMDIChildWndEx.h"
 
 #ifndef PLUGIN_NO_AUTO_LIB
 	#ifdef _DEBUG
