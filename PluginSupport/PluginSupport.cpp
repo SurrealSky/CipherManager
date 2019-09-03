@@ -96,7 +96,7 @@ void CPluginSupportApp::LoadPlugin(CWinApp* pApp)
 	CString strPath = GetApplicationPath();
 	strPath += _T("plugins\\");
 	strPath += _T("*.dll");
-	OutputDebugString(L"插件路径:");
+	OutputDebugString(_T("插件路径:"));
 	OutputDebugString(strPath);
 	CFileFind find;
 	BOOL bIsFind = find.FindFile(strPath);
@@ -113,19 +113,19 @@ void CPluginSupportApp::LoadPlugin(CWinApp* pApp)
 			CString strFileName = find.GetFileName();
 			CString strFile = strPath;
 			strFile.Replace(_T("*.dll"), strFileName);
-			OutputDebugString(L"找到插件:");
+			OutputDebugString(_T("找到插件:"));
 			OutputDebugString(strFile);
 			CPluginWrapper* pPluginWrapper = new CPluginWrapper();
 			BOOL bReslut = pPluginWrapper->LoadDLL(strFile);
 			if (bReslut)
 			{
 				m_PluginArray.Add(pPluginWrapper);
-				OutputDebugString(L"加载成功");
+				OutputDebugString(_T("加载成功"));
 			}
 			else
 			{
 				delete pPluginWrapper;
-				OutputDebugString(L"加载失败");
+				OutputDebugString(_T("加载失败"));
 			}
 		}
 	}
@@ -157,7 +157,7 @@ CString CPluginSupportApp::GetApplicationPath()
 	TCHAR path[_MAX_PATH];
 
 	GetModuleFileName(AfxGetInstanceHandle(), filename, MAX_PATH);
-	_wsplitpath_s(filename, drive, _MAX_DRIVE, path, _MAX_PATH, NULL, 0, NULL, 0);
+	_tsplitpath_s(filename, drive, _MAX_DRIVE, path, _MAX_PATH, NULL, 0, NULL, 0);
 
 	CString strLocation(drive);
 	strLocation += path;

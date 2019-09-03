@@ -115,7 +115,7 @@ CString CPluginBrowserDlg::GetApplicationPath()
 	TCHAR path[_MAX_PATH];
 
 	GetModuleFileName(AfxGetInstanceHandle(), filename, MAX_PATH);
-	_wsplitpath_s(filename, drive, _MAX_DRIVE, path, _MAX_PATH, NULL, 0, NULL, 0);
+	_tsplitpath_s(filename, drive, _MAX_DRIVE, path, _MAX_PATH, NULL, 0, NULL, 0);
 
 	CString strLocation(drive);
 	strLocation += path;

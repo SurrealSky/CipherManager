@@ -120,7 +120,7 @@ BOOL CCipherManagerApp::InitInstance()
 	pFrame->ShowWindow(SW_NORMAL);
 	pFrame->UpdateWindow();
 
-	OutputDebugString(L"开始加载插件");
+	OutputDebugString(_T("开始加载插件"));
 	PIInitPlugin(this);
 
 	// register plugin document templates
