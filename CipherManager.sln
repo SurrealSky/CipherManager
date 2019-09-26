@@ -6,8 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PluginSupport", "PluginSupport\PluginSupport.vcxproj", "{4752F8EF-F997-4D41-9769-CC7FB118CC00}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PluginBrowser", "PluginBrowser\PluginBrowser.vcxproj", "{93F48DB5-53B2-4029-A28A-772B6D23BB90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4752F8EF-F997-4D41-9769-CC7FB118CC00} = {4752F8EF-F997-4D41-9769-CC7FB118CC00}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CipherManager", "CipherManager\CipherManager.vcxproj", "{D8AA5F69-5DF5-4909-AE85-25E5E03A683D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93F48DB5-53B2-4029-A28A-772B6D23BB90} = {93F48DB5-53B2-4029-A28A-772B6D23BB90}
+		{4752F8EF-F997-4D41-9769-CC7FB118CC00} = {4752F8EF-F997-4D41-9769-CC7FB118CC00}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
