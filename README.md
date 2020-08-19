@@ -1,2 +1,2 @@
 # CipherManager
- MFC插件系统
+ 基于MFC的插件框架系统
