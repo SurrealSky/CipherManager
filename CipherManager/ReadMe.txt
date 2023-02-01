@@ -5,6 +5,6 @@
 4.添加menu菜单项
 5.添加插件类，如DesToolPlugin类，继承CPlugin类
 6.创建panel的对话框，边框为none,并添加对话框类
-7.建议使用ChildFrm和ChildView来创建界面（复制过来）
+7.建议使用ChildFrm和ChildView来创建界面（复制过来），并在ChildView.h中创建panel实例。
 8.在程序的CWinApp类中添加菜单事件响应，代码类似
 9.修改项目生成目录到plugins
